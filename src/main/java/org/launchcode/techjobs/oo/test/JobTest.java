@@ -76,7 +76,7 @@ public class JobTest {
                                          "Employer:"+testJob.getEmployer()+'\n'+
                         "Location:"+testJob.getLocation()+'\n'+
                         "Position Type:"+testJob.getPositionType()+'\n'+
-                        "Core Competency:"+testJob.getCoreCompetency());
+                        "Core Competency:"+testJob.getCoreCompetency()+'\n');
         assertEquals(output,testJob.toString());
 
         //System.out.println(testJob.toString());
@@ -89,12 +89,12 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField() {
         Job testJob = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType(""), new CoreCompetency("Persistence"));
-        String output = String.format('\nID:'testJob.getId()+'\n'+
+        String output = String.format('\nID:'+testJob.getId()+'\n'+
                 "Name:"+testJob.getName()+'\n'+
                 "Employer:"+"Data not available"+'\n'+
                 "Location:"+testJob.getLocation()+'\n'+
                 "Position Type:"+"Data not available"+'\n'+
-                "Core Competency:"+testJob.getCoreCompetency());
+                "Core Competency:"+testJob.getCoreCompetency()+'\n');
         assertEquals(output,testJob.toString());
     }
 }
