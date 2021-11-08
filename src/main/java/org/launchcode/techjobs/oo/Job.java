@@ -111,7 +111,7 @@ public class Job {
         if (coreCompetency.getValue().equals("") || coreCompetency.getValue()==null ){
             coreCompetency.setValue("Data not available");
         }
-        return  "'\n'ID: " + id +'\n' +
+        return  "\nID: " + id +'\n' +
                 "Name: " + name + '\n' +
                 "Employer: " + employer + '\n'+
                 "Location: " + location +'\n'+
